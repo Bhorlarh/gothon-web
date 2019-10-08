@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<header>
+	<nav class="nav-bar">
+		<ul>
+			<li><a href="/">Go home</a></li>
+			<li><a href="/logout">Log out</a></li>
+		</ul>
+	</nav>
+</header>
+<section>
+	<div class="profile">
+		<p id="msg">Welcome {{name}}</P>
+	</div>
+	<div class="details">
+		<p id="msg2">Highscore<br>{{hscore}}</p>
+		<a href="/play"><p>PLAY</p></a>
+		<a href="/reset"><p>Reset</p></a>
+	</div>
+</section>
+</body>
+</html>
+
+{% endblock %}

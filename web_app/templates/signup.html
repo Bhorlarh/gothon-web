@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<header class="deor">
+	<nav class="nav-bar">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/login">Login</a></li>
+		</ul>
+	</nav>
+</header>
+<section >
+	<form class="form" action="/signup", method="POST">
+		<p>GOTHON WEB</p>
+		<p>Create an account and start playing</p><br>
+		Username: <br><input class="input" type="text" name="name"><br>
+		Email: <br><input class="input" type="email" name="email"><br>
+		Password: <br><input class="input" type="password" name="password"><br>
+		Re-enter Password: <br><input class="input" type="password"><br>
+		<div id="sub" align="right">
+			<input class="submit" type="submit" value="Sign up">
+		</div>
+	</form>
+</section>
+{% endblock %}

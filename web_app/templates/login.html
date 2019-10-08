@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<header class="deor">
+	<nav class="nav-bar">
+		<ul>
+			<li><a href="/">Home</a></li>
+		</ul>
+	</nav>
+</header>
+<section >
+	<form class="form" action="/login" method="POST">
+		<p>GOTHON WEB</p>
+		Username: <br><input class="input" type="text" name="name"><br>
+		Password: <br><input class="input" type="password" name="password"><br>
+		Remember me: <input type="checkbox" name="remember"><br>
+		<div id="sub" align="right">
+			<input class="submit" type="submit" value="Login">
+		</div>
+	</form>
+</section>
+{% endblock %}

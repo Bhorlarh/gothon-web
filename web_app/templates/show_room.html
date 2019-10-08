@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<nav class="deor"></nav>
+<div class="room">
+	
+	<h1 class="title"> {{ room.name }} </h1>
+
+	<pre>
+	{{ room.description }}
+	</pre>
+	
+{% if room.name in ["Death", "The End"] %}
+	<a href="/play"><input type="button" value="Play Again" class="again"></a>
+	<a href="/profile"><input type="button" value="Quit" class="quit"></a>
+
+</div>
+{% else %}
+	<p>
+	<form action="/game" method="POST">
+		<input class="g_input" type="text" name="action" autocomplete="off">
+		<input class="g_btn" type="SUBMIT" value="go">
+		<a href="/profile"><input type="button" value="Quit" class="quit"></a>
+	</form>
+	
+{% if options %}
+	Options are:
+{% for i in options %}
+	<p>o {{i}}</p>
+{% endfor %}
+{% endif %}
+	</p>
+</div>
+{% endif %}
+
+{% endblock %}

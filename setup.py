@@ -20,7 +20,7 @@ config = {
 	],
 	'python_requires': '>=3.6',
 	'install_requires': ['flask', 'flask_sqlalchemy', 'flask_login'
-							'werkzeug.security', 'nose']
+							'werkzeug', 'nose']
 }
 	
 setuptools.setup(**config)

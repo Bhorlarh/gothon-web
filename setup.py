@@ -19,7 +19,7 @@ config = {
 		"Operating System :: OS Independent",
 	],
 	'python_requires': '>=3.6',
-	'install_requires': ['flask', 'flask_sqlalchemy', 'flask_login'
+	'install_requires': ['flask', 'flask_sqlalchemy', 'flask_login',
 							'werkzeug', 'nose']
 }
 	

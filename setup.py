@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
 	long_description = fh.read()
 	
 config = {
-	'name': 'gothonweb_webapp_bebian'.
+	'name': 'gothonweb_webapp_bebian',
 	'version': '0.0.1',
 	'author': 'bebian',
 	'author_email': 'bebian@contact.com',

@@ -17,7 +17,7 @@ config = {
 		"Programming Language :: Python :: 3",
 		"License :: OSI Approved :: MIT License",
 		"Operating System :: OS Independent",
-	]
+	],
 	'python_requires': '>=3.6',
 	'install_requires': ['flask', 'flask_sqlalchemy', 'flask_login'
 							'werkzeug.security', 'nose']

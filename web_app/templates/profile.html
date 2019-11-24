@@ -1,26 +1,28 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
-<header>
-	<nav class="nav-bar">
-		<ul>
-			<li><a href="/">Go home</a></li>
-			<li><a href="/logout">Log out</a></li>
-		</ul>
-	</nav>
-</header>
-<section>
+<div class="WHITE">
 	<div class="profile">
-		<p id="msg">Welcome {{name}}</P>
+		<header>
+			<nav>
+				<ul class="nav-bar">
+					<li><a href="/">Home</a></li>
+					<li><a href="/logout">Log out</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="user">
+			<div class="welcome">
+				<p >Welcome {{name}}</P>
+			</div>
+			<div class="details">
+				<span class="Title">Player Stats</span>
+				<p>Highscore: {{hscore}}</p>
+				<div class="actions">
+					<a href="/play"><button class="btn">New Game</button></a>
+					<a href="/reset"><button class="btn">Reset Highscore</button></a>
+				</div>
+			</div>
 	</div>
-	<div class="details">
-		<p id="msg2">Highscore<br>{{hscore}}</p>
-		<a href="/play"><p>PLAY</p></a>
-		<a href="/reset"><p>Reset</p></a>
-	</div>
-</section>
-</body>
-</html>
-
+</div>
 {% endblock %}

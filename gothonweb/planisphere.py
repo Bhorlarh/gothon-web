@@ -14,7 +14,7 @@ class Room(object):
 central_corridor = Room("Central Corridor",
 """
 The Gothons of Planet Percal #25 have invaded your ship and 
-killed your entire crew. You are the last surviving member 
+killed your entire crew. You are the last surviving member
 and your mission is to get the neutron destruct bomb from
 the Weapon Armoury, place it on the bridge, and blow the ship
 up after getting into a pod.
@@ -22,16 +22,16 @@ up after getting into a pod.
 You're running down the central corridor to the Weapons Armoury.
 A Gothon jumps out, red scaly skin, dark grimy teeth, and evil
 clown costume flowing around his hate filled body. He's blocking
-the Armoury and about to pull a weapon to blast you. What do you 
+the Armoury and about to pull a weapon to blast you. What do you
 do?
 """)
 
-laser_weapon_armory = Room("Laser Weapon Armory", 
+laser_weapon_armory = Room("Laser Weapon Armory",
 """
 Lucky for you they made you learn Gothon in the academy. You
 tell him the one Gothon joke you know: Lbhe zbgure vf fb sng,
 jura fur fvgf nebha fur fvgf nebhaq gur ubhfr. The Gothon stops
-not to laugh, then bursts out laughing and while he's laughing 
+not to laugh, then bursts out laughing and while he's laughing
 you run up and shoot him in the head putting him down, then jump
 through to the Weapon Armory door.
 
@@ -44,7 +44,7 @@ wrong 10 times, the lock closes forever and you can't get the
 bomb. What is the code?
 """)
 
-the_bridge = Room("The Bridge", 
+the_bridge = Room("The Bridge",
 """
 The container clicks open and the seal breaks, gas out. You
 grab the neutron bomb and run fast as you can to the bridge
@@ -58,7 +58,7 @@ the active bomb in your arm and don't want to set it off.
 What do you do?
 """)
 
-escape_pod = Room("Escape Pod", 
+escape_pod = Room("Escape Pod",
 """
 You point your blaster at the bomb under your arm and the Gothons
 put their hands up and start to sweat. You inch backward to the
@@ -79,13 +79,13 @@ the_end_winner = Room("The End",
 """
 You jump into pod 2 and hit the eject button. The pod easily
 slides out into space heading to the planet below. As it flies
-to the planet, you look back and see your ship implode then 
+to the planet, you look back and see your ship implode then
 explode like a bright star, taking out the Gothon ship at the
 same time. You won!
 """
 )
 
-the_end_loser = Room("The End", 
+the_end_loser = Room("The End",
 """
 You jump into a random pod and hit the eject button. The pod
 escapes out into the void of space, then implodes as the hull
@@ -139,7 +139,7 @@ dodge_death = Room("Death", """
 Like a world class boxer you dodge, weave, slip and slide right as
 the Gothon's blaster cranks a laser past your head. In the middle
 of your artful dodge your foot slips and you bang your head on the
-metal wall and pass out. You wake up shortly after only to die as 
+metal wall and pass out. You wake up shortly after only to die as
 the Gothon stomps on your head and eats you.
 """)
 
@@ -161,7 +161,7 @@ _Trap_Room_ = Room("Cage", """
 Congrats on finding this, I hope you're pleased with yourself. You
 wanted to hack me and I got you instead. Enjoy!
 """)
-				
+
 def load_room(name):
 	"""
 	There is a potential security problem here.
@@ -171,7 +171,7 @@ def load_room(name):
 		return globals().get(name)
 	else:
 		return _Trap_Room_
-	
+
 def name_room(room):
 	"""
 	Same possible security problem. Can you trust room?
@@ -179,7 +179,7 @@ def name_room(room):
 	"""
 	if room in allowed:
 		for key, value in globals().items():
-			if value == room:		
+			if value == room:
 				return key
 	else:
 		return _Trap_Room_

@@ -11,20 +11,19 @@ from web_app import main, app, web_engine
 def main():
 	app.config['SECRET_KEY'] = 'A0Zr98j/1234f3gpl[.;[ca3yX R~XHH!jmN]LWciudv=c-ls-c0sjX/,?RT'
 	app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
-	app.debug = True
 
 	db.init_app(app)
-	
+
 	login_manager = LoginManager()
 	login_manager.login_view = 'login'
 	login_manager.init_app(app)
-	
+
 	from .models import User
-	
+
 	@login_manager.user_loader
 	def load_user(user_id):
 		return User.query.get(int(user_id))
 
 	return app
-		
+
 main()

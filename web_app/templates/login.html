@@ -1,22 +1,24 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<header class="deor">
-	<nav class="nav-bar">
-		<ul>
-			<li><a href="/">Home</a></li>
-		</ul>
-	</nav>
-</header>
-<section >
-	<form class="form" action="/login" method="POST">
-		<p>GOTHON WEB</p>
-		Username: <br><input class="input" type="text" name="name"><br>
-		Password: <br><input class="input" type="password" name="password"><br>
-		Remember me: <input type="checkbox" name="remember"><br>
-		<div id="sub" align="right">
-			<input class="submit" type="submit" value="Login">
-		</div>
-	</form>
-</section>
+<div class="BLACK">
+	<header>
+		<nav>
+			<ul class="nav-bar">
+				<li><a href="/">Home</a></li>
+				<li><a href="/signup">Sign up</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="container">
+		<form class="form" action="/login" method="POST">
+			<p class="title">Gothon Web</p>
+			<br>
+			Username: <br><input class="input" type="text" name="name"><br>
+			Password: <br><input class="input" type="password" name="password"><br>
+			Remember me: <input type="checkbox" name="remember"><br>
+			<input class="log btn" type="submit" value="Login">
+			</form>
+	</section>
+</div>
 {% endblock %}

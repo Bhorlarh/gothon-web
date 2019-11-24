@@ -1,25 +1,25 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<header class="deor">
-	<nav class="nav-bar">
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/login">Login</a></li>
-		</ul>
-	</nav>
-</header>
-<section >
-	<form class="form" action="/signup", method="POST">
-		<p>GOTHON WEB</p>
-		<p>Create an account and start playing</p><br>
-		Username: <br><input class="input" type="text" name="name"><br>
-		Email: <br><input class="input" type="email" name="email"><br>
-		Password: <br><input class="input" type="password" name="password"><br>
-		Re-enter Password: <br><input class="input" type="password"><br>
-		<div id="sub" align="right">
-			<input class="submit" type="submit" value="Sign up">
-		</div>
-	</form>
-</section>
+<div class="BLACK">
+	<header>
+		<nav>
+			<ul class="nav-bar">
+				<li><a href="/">Home</a></li>
+				<li><a href="/login">Log in</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="container">
+			<form class="form" action="/signup", method="POST">
+				<p class="title">Sign up</p>
+				<p>Create an account and dive into gothon!</p><br>
+				Username: <br><input class="input" type="text" name="name"><br>
+				Email: <br><input class="input" type="email" name="email"><br>
+				Password: <br><input class="input" type="password" name="password"><br>
+				Re-enter Password: <br><input class="input" type="password"><br>
+				<input class="log btn" type="submit" value="Sign up">
+			</form>
+		</section>
+</div>
 {% endblock %}
